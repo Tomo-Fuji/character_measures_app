@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+  before_action :forbid_login_user,{only:[:top,:login_form,:login,:create_form,:create]}
   def top
   end
   def login_form

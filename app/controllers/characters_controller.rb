@@ -1,5 +1,7 @@
 class CharactersController < ApplicationController
+  before_action :authenticate_user,{only:[:measure, :index, :ensure_correct_user]}
   before_action :ensure_correct_user,{only:[:measure, :index]}
+
   def ensure_correct_user
     if @current_user.id != params[:id].to_i
       flash[:notice] = "アクセス権限がありません"
