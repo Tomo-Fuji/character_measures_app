@@ -10,9 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_09_052446) do
+ActiveRecord::Schema.define(version: 2020_05_09_045531) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "measures", force: :cascade do |t|
+    t.integer "user_id"
     t.text "mario"
     t.text "donkeykong"
     t.text "link"
@@ -42,8 +46,6 @@ ActiveRecord::Schema.define(version: 2020_05_09_052446) do
     t.text "mewtwo"
     t.text "roy"
     t.text "chrom"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.text "mrgame"
     t.text "metaknight"
     t.text "pit"
@@ -94,7 +96,8 @@ ActiveRecord::Schema.define(version: 2020_05_09_052446) do
     t.text "banjo"
     t.text "terry"
     t.text "byleth"
-    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
