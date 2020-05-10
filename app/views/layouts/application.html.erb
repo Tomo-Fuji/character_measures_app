@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>キャラメモ！</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="icon" href="favicon.ico">
+  </head>
+
+  <body>
+    <div class="wrapper">
+    <header>
+      <div class="header-logo">
+        <% if session[:user_id] %>
+          <%= link_to("キャラメモ！","/characters/#{@current_user.id}",:style=>"color:black;")%>
+        <% else %>
+          <%= link_to("キャラメモ！","/",:style=>"color:black;")%>
+        <% end %>
+      </div>
+        <ul class = "header-menus">
+          <% if @current_user %>
+          <li>
+            <%= link_to("#{@current_user.name}","/characters/#{@current_user.id}")%>
+          </li>
+          <li>
+            <%= link_to("ログアウト", "/logout", {method: :post}) %>
+          </li>
+
+          <% else%>
+          <li>
+            <%= link_to("ログイン","/login_form",:style=>"color:black;")%>
+          </li>
+          <% end%>
+
+        </ul>
+
+  </header>
+  <% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+    <%= yield %>
+
+    </div>
+  </body>
+</html>

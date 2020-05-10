@@ -1,0 +1,15 @@
+<div class="main measure">
+  <div class="container">
+    <div class="form measure-edit">
+      <div class="form-body">
+        <%= form_tag("/characters/#{@character_en}/save" ) do %>
+          <div class="form-heading">
+            <%= @character %>
+          </div>
+          <textarea name="content"><%= @measure %></textarea>
+          <input type="submit" value="保存">
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

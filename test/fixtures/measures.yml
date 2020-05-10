@@ -1,0 +1,65 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mario: MyText
+  donkeykong: MyText
+  link: MyText
+  samus: MyText
+  darksamus: MyText
+  yoshi: MyText
+  kirby: MyText
+  fox: MyText
+  pikachu: MyText
+  luigi: MyText
+  ness: MyText
+  captainfalcon: MyText
+  purin: MyText
+  peach: MyText
+  daisy: MyText
+  koopa: MyText
+  iceclimber: MyText
+  sheik: MyText
+  zelda: MyText
+  drmario: MyText
+  pichu: MyText
+  falco: MyText
+  marth: MyText
+  lucina: MyText
+  younglink: MyText
+  ganondorf: MyText
+  mewtwo: MyText
+  roy: MyText
+  chrom: MyText
+  mrgame: MyString
+
+two:
+  mario: MyText
+  donkeykong: MyText
+  link: MyText
+  samus: MyText
+  darksamus: MyText
+  yoshi: MyText
+  kirby: MyText
+  fox: MyText
+  pikachu: MyText
+  luigi: MyText
+  ness: MyText
+  captainfalcon: MyText
+  purin: MyText
+  peach: MyText
+  daisy: MyText
+  koopa: MyText
+  iceclimber: MyText
+  sheik: MyText
+  zelda: MyText
+  drmario: MyText
+  pichu: MyText
+  falco: MyText
+  marth: MyText
+  lucina: MyText
+  younglink: MyText
+  ganondorf: MyText
+  mewtwo: MyText
+  roy: MyText
+  chrom: MyText
+  mrgame: MyString

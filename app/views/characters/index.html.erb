@@ -1,0 +1,36 @@
+<div class="main measures-index">
+  <div class="container">
+    <div class="search">
+
+      <%= form_tag("/characters/#{@current_user.id}") do %>
+        <input class = "letters" type="string" name="search">
+        <input class = "kensaku" type="submit" value="検索">
+      <% end %>
+    </div>
+    <div class="items">
+      <% if @fighters_ja_searched.kind_of?(String) %>
+        <%= link_to( "/characters/#{@current_user.id}/#{@fighters_en_searched}") do%>
+          <div class="measures-index-item">
+            <div class="measure-character-name">
+              <%="#{@fighters_ja_searched}"%>
+            </div>
+          </div>
+        <% end %>
+      <% else %>
+        <%= @fighters_ja_searched.zip(@fighters_en_searched) do |ja ,en| %>
+          <% if ja!=nil && en!=nil %>
+            <%= link_to( "/characters/#{@current_user.id}/#{en}") do%>
+              <div class="measures-index-item">
+                <div class="measure-character-name">
+                  <%=ja%>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="putting">
+    </div>
+  </div>
+</div>
