@@ -87,3 +87,19 @@
 .search .kensaku:active{
   box-shadow: 0 0 0 #696969;
 }
+
+@media(max-width:960px){
+  .items a{
+    width:44%;
+  }
+}
+
+@media(max-width:480px){
+  .container{
+    max-width: 100%;
+  }
+
+  .items a{
+    width:94%;
+  }
+}

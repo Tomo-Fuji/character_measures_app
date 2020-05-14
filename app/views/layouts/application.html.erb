@@ -8,6 +8,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
   <body>
@@ -20,7 +21,8 @@
           <%= link_to("キャラメモ！","/",:style=>"color:black;")%>
         <% end %>
       </div>
-        <ul class = "header-menus">
+      <div class="header-menus1">
+        <ul>
           <% if @current_user %>
           <li>
             <%= link_to("#{@current_user.name}","/characters/#{@current_user.id}")%>
@@ -36,6 +38,9 @@
           <% end%>
 
         </ul>
+      </div>
+
+
 
   </header>
   <% if flash[:notice] %>
